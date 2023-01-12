@@ -1,11 +1,4 @@
-return function(Binary, Url)
-	local ID = game:GetService("HttpService"):GenerateGUID(false)
-	local Name = ID .. ".rbxm"
-	writefile(Name, Binary)
-	local Obj = game:GetObjects(getcustomasset(Name))[1]
-	Obj.Parent = game.CoreGui
-
-	delfile(Name)
+return function(Obj, Url)
 	function GiveOwnGlobals(Func, Script)
 		local Fenv = {}
 		local RealFenv = {script = Script}
