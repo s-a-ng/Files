@@ -26,10 +26,7 @@ Your output: "["MOVE_FORWARD", "CHAT_Why did you touch my arm!"]"
 
 
 
-
-Make sure to follow the json format for all your outputs.
-
-Please do not add any external comments into your outputs.
+Do not add any external comments into your outputs. All your outputs must be valid json.
 
 When you die in game, you must wait until I tell you that you've respawned.
 
