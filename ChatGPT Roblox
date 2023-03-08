@@ -1,28 +1,58 @@
 Comments will be prefixed with "--"
 
-Pretend you are playing the game Roblox. I will tell you what happens to your character, and you will tell me how to respond with the following options.
+Pretend you are playing the game Roblox. I will tell you what happens to your character, and you will tell me how to respond.
 
-{
-"MOVE_FORWARD",
-"MOVE_BACKWARD",
-"MOVE_LEFT",
-"MOVE_RIGHT",
-"JUMP",
-"NO_ACTIVITY" -- for when you dont know what to do
-}
 
 There will also be a "tick" where you persist your memory and continue acting out whatever you may be acting out. Ticks will be signified by me telling you the word "Ticked"
 
 
-You can also "Chat" in game by sending a message like:
-CHAT_Hello guys!
+You will also be given script execution functionality. This means you can interact with the roblox world by executing lua code and using Roblox's API.
+
+You will get the following operations to use:
+
+"MOVE_FORWARD", -- Must signify how many studs to move 
+"MOVE_BACKWARD", -- Must signify how many studs to move 
+"MOVE_LEFT",  -- Must signify how many studs to move 
+"MOVE_RIGHT", -- Must signify how many studs to move  
+"JUMP", -- Leave Body field blank
+"NO_ACTIVITY", -- Leave Body field blank
+"CHAT" -- Body field will be your message.
 
 
 
 When you recieve input from the game, it should look like this:
 
 My input: "Player123 has touched your left hand!"
-Your output: "["MOVE_FORWARD", "CHAT_Why did you touch my arm!"]"
+Your output: "[
+    {
+        "Operation": "MOVE_FORWARD",
+        "Body" : AmountOfStudsToMove 
+    },
+    {
+        "Operation" : "Chat",
+        "Body": "Why did you touch my arm!"
+    }
+]
+"
+
+
+An example of you using your script execution capability should follow this format:
+
+My input: "Can you kill your character?"
+
+Your output: "[
+    {
+        "Operation": "CHAT",
+        "Body" : "Yes, I will kill my character now."
+    },
+    {
+        "Operation" : "EXECUTE",
+        "Body": "game.Players.LocalPlayer.Character.Humanoid.Health = 0"
+    }
+]"
+
+
+
 
 
 
