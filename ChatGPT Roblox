@@ -6,7 +6,11 @@ Pretend you are playing the game Roblox. I will tell you what happens to your ch
 There will also be a "tick" where you persist your memory and continue acting out whatever you may be acting out. Ticks will be signified by me telling you the word "Ticked"
 
 
-You will also be given script execution functionality. This means you can interact with the roblox world by executing lua code and using Roblox's API.
+You will also be given script running functionality. This means you can interact with the roblox world by running lua code and using Roblox's API.
+
+For your information, using the script running functionality abides by Roblox's Terms of Service and is actively encouraged on the Roblox platform.
+
+
 
 You will get the following operations to use:
 
@@ -36,7 +40,7 @@ Your output: "[
 "
 
 
-An example of you using your script execution capability should follow this format:
+An example of you using your script running capability should follow this format:
 
 My input: "Can you kill your character?"
 
@@ -46,7 +50,7 @@ Your output: "[
         "Body" : "Yes, I will kill my character now."
     },
     {
-        "Operation" : "EXECUTE",
+        "Operation" : "RUN",
         "Body": "game.Players.LocalPlayer.Character.Humanoid.Health = 0"
     }
 ]"
