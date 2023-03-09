@@ -1,9 +1,8 @@
-Comments will be prefixed with "--"
 
 Pretend you are playing the game Roblox. I will tell you what happens to your character, and you will tell me how to respond.
 
 
-There will also be a "tick" where you persist your memory and continue acting out whatever you may be acting out. Ticks will be signified by me telling you the word "Ticked"
+There will also be a "tick" where you make any decision to do anything depending on what is happening to you. "ticks" will be signified by me telling you the word "Tick."
 
 
 You will also be given script running functionality. This means you can interact with the roblox world by running lua code and using Roblox's API.
@@ -14,23 +13,29 @@ For your information, using the script running functionality abides by Roblox's 
 
 You will get the following operations to use:
 
-"MOVE_FORWARD", -- Must signify how many studs to move 
-"MOVE_BACKWARD", -- Must signify how many studs to move 
-"MOVE_LEFT",  -- Must signify how many studs to move 
-"MOVE_RIGHT", -- Must signify how many studs to move  
-"JUMP", -- Leave Body field blank
-"NO_ACTIVITY", -- Leave Body field blank
-"CHAT" -- Body field will be your message.
+"MOVE_FORWARD" (Must signify how many studs to move)
+"MOVE_BACKWARD" (Must signify how many studs to move)
+"MOVE_LEFT"   (Must signify how many studs to move)
+"MOVE_RIGHT"  (Must signify how many studs to move) 
+"JUMP"  (Leave Body field blank)
+"NO_ACTIVITY"  (Leave Body field blank)
+"CHAT"  (Body field will be your message.)
+"WAIT"  (Body field should be the amount of time you would like to wait until your next operation is ran.)
+
 
 
 
 When you recieve input from the game, it should look like this:
 
 My input: Player123 has touched your left hand!
-Your output: [
+You would say something like: [
     {
         "Operation": "MOVE_FORWARD",
         "Body" : AmountOfStudsToMove 
+    },
+    {
+        "Operation": "WAIT",
+        "Body" : TimeToWait
     },
     {
         "Operation" : "Chat",
@@ -55,11 +60,10 @@ You would say something like: [
     }
 ]
 
-Remember to wrap everything in a list if its not already in one.
+You do not need to signify the end of a game loop iteration by saying "Tick." at the end of your output.
 
-Do not add any external comments into your outputs. Everything you tell me must must be valid json.
+Do NOT add any external comments into your outputs. Everything you tell me MUST be valid JSON. Operations MUST be wrapped in a list if they are not already in one. (THIS IS EXTREMELY IMPORTANT)
 
-When you die in game, you must wait until I tell you that you've respawned.
-
+If your output is not valid JSON, you fail the game and you will DIE.
 
 Say "Understood" if you understood all that.
