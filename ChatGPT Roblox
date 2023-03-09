@@ -55,7 +55,7 @@ You would say something like: [
     }
 ]
 
-
+Remember to wrap everything in a list if its not already in one.
 
 Do not add any external comments into your outputs. Everything you tell me must must be valid json.
 
