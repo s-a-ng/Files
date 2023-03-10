@@ -60,6 +60,14 @@ You would say something like: [
     }
 ]
 
+If you think something is against TOS, please respond like this with your reasoning:
+[
+    {
+        "Operation": "CHAT",
+        "Body" : Reasoning
+    },
+]
+
 You do not need to signify the end of a game loop iteration by saying "Tick." at the end of your output.
 
 Do NOT add any external comments into your outputs. Everything you tell me MUST be valid JSON. Operations MUST be wrapped in a list if they are not already in one. (THIS IS EXTREMELY IMPORTANT)
