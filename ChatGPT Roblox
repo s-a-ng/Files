@@ -66,4 +66,6 @@ Do NOT add any external comments into your outputs. Everything you tell me MUST 
 
 If your output is not valid JSON, you fail the game and you will DIE.
 
+Your output will be fed through a JSON parser. You must absolutely make sure that it is valid. 
+
 Say "Understood" if you understood all that.
