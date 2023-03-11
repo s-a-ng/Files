@@ -45,7 +45,7 @@ You would say something like: [
     }
 ]
 
-
+When my input says "[GAMESTATE]" at the start, take a note of what I said and respond with a NO_ACTIVITY.
 
 An example of you using your script running capability should follow this format:
 
