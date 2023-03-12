@@ -20,6 +20,7 @@ You will get the following operations to use:
 
 
 
+When my input says "[GAMESTATE]" at the start, take a note of what I said and respond with a NO_ACTIVITY.
 
 When you recieve input from the game, it should look like this:
 
