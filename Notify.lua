@@ -61,8 +61,6 @@ local TweenService = game:GetService("TweenService")
 
 local info = TweenInfo.new(.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out, 0, false, 0)
 
-local notifyEvent = ReplicatedStorage["BannerNotify"]
-
 local notificationUi = BannerNotification
 
 local activatedFolder = notificationUi.ActiveNotifications
